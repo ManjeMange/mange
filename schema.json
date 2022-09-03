@@ -1,32 +1,32 @@
 {
- "collections": {
-  "z0dyci1epj2rl1f": {
-   "id": "z0dyci1epj2rl1f",
-   "created": "2022-09-02 23:42:11.453",
-   "updated": "2022-09-02 23:42:11.453",
-   "name": "products",
-   "system": false,
-   "schema": [
-    {
-     "system": false,
-     "id": "lvxnnesr",
-     "name": "name",
-     "type": "text",
-     "required": true,
-     "unique": true,
-     "options": {
-      "min": 1,
-      "max": null,
-      "pattern": ""
-     }
+  "collections": {
+    "z0dyci1epj2rl1f": {
+      "id": "z0dyci1epj2rl1f",
+      "created": "2022-09-02 23:42:11.453",
+      "updated": "2022-09-02 23:42:11.453",
+      "name": "products",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "lvxnnesr",
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "unique": true,
+          "options": {
+            "min": 1,
+            "max": null,
+            "pattern": ""
+          }
+        }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null
     }
-   ],
-   "listRule": null,
-   "viewRule": null,
-   "createRule": null,
-   "updateRule": null,
-   "deleteRule": null
-  }
- },
- "deleted": {}
+  },
+  "deleted": {}
 }
