@@ -3,7 +3,7 @@
   import { useRoutes } from 'lib/Router';
   import Home from './pages/Home.svelte';
 
-  const { clickHandler } = useRoutes([
+  useRoutes([
     {
       path: '/',
       component: Home,
@@ -11,5 +11,4 @@
   ]);
 </script>
 
-<svelte:window on:click={clickHandler} />
 <Route />

@@ -9,7 +9,7 @@
   const index = getContext<number>('svelte-router-internal-index') || 0;
   setContext('svelte-router-internal-index', index + 1);
 
-  $: handler = $handlers[index];
+  $: handler = $handlers?.[index];
 </script>
 
 {#if handler}
