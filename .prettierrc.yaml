@@ -4,5 +4,4 @@ printWidth: 90
 plugins:
   - 'prettier-plugin-svelte'
 svelteStrictMode: false
-svelteBracketNewLine: true
 svelteIndentScriptAndStyle: true

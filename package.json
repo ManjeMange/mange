@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "ci": "yarn lint",
+    "ci": "yarn lint && yarn check",
     "format": "prettier --write \"./src/**/*.{js,svelte,html,ts}\"",
     "lint": "eslint './src/**/*.{js,ts,svelte}'",
     "lint:fix": "yarn lint --fix",
