@@ -3,7 +3,7 @@
 
   import { getContext, setContext, type ComponentType } from 'svelte';
 
-  const handlers = getContext<Readable<[ComponentType, any][]>>(
+  const handlers = getContext<Readable<[ComponentType, unknown][]>>(
     'svelte-router-internal-handlers'
   );
   const index = getContext<number>('svelte-router-internal-index') || 0;

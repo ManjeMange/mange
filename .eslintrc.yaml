@@ -20,9 +20,7 @@ overrides:
     - '*.svelte'
     processor: 'svelte3/svelte3'
 settings:
-  # ignore style tags in Svelte because of Tailwind CSS
-  # See https://github.com/sveltejs/eslint-plugin-svelte3/issues/70
-  'svelte3/ignore-styles': true
+  'svelte3/typescript': true
 plugins:
   - 'svelte3'
   - '@typescript-eslint/eslint-plugin'
