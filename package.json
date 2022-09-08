@@ -9,6 +9,7 @@
     "format": "prettier --write \"./src/**/*.{js,svelte,html,ts}\"",
     "lint": "eslint './src/**/*.{js,ts,svelte}'",
     "lint:fix": "yarn lint --fix",
+    "prelint:fix": "yarn format",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
