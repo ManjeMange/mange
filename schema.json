@@ -1,9 +1,306 @@
 {
   "collections": {
+    "72jysj0nhd6masj": {
+      "id": "72jysj0nhd6masj",
+      "created": "2022-09-10 13:57:35.090",
+      "updated": "2022-09-10 14:46:15.454",
+      "name": "shopping_items",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "dasqmgmx",
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "unique": false,
+          "options": {
+            "min": null,
+            "max": null,
+            "pattern": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "zcjehaw7",
+          "name": "quantity",
+          "type": "number",
+          "required": true,
+          "unique": false,
+          "options": {
+            "min": 1,
+            "max": null
+          }
+        },
+        {
+          "system": false,
+          "id": "ypjhflb2",
+          "name": "product",
+          "type": "relation",
+          "required": false,
+          "unique": true,
+          "options": {
+            "maxSelect": 1,
+            "collectionId": "z0dyci1epj2rl1f",
+            "cascadeDelete": true
+          }
+        },
+        {
+          "system": false,
+          "id": "ofomw1ou",
+          "name": "group",
+          "type": "relation",
+          "required": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "collectionId": "vp1b2a8fx1d8e0k",
+            "cascadeDelete": false
+          }
+        },
+        {
+          "system": false,
+          "id": "7yjzti1d",
+          "name": "checked",
+          "type": "bool",
+          "required": true,
+          "unique": false,
+          "options": {}
+        }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null
+    },
+    "7t40i7enqhsc5kh": {
+      "id": "7t40i7enqhsc5kh",
+      "created": "2022-09-10 15:32:11.699",
+      "updated": "2022-09-10 15:43:25.567",
+      "name": "recipe_ingredients",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "wobkx6xq",
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "unique": false,
+          "options": {
+            "min": null,
+            "max": null,
+            "pattern": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "3ijclkva",
+          "name": "recipe",
+          "type": "relation",
+          "required": true,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "collectionId": "p0cna5o4iqk8o9w",
+            "cascadeDelete": false
+          }
+        }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null
+    },
+    "mmvn99h3ywgm6ol": {
+      "id": "mmvn99h3ywgm6ol",
+      "created": "2022-09-10 14:48:35.967",
+      "updated": "2022-09-10 14:48:35.967",
+      "name": "locations",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "ie2xlvlf",
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "unique": true,
+          "options": {
+            "min": null,
+            "max": null,
+            "pattern": ""
+          }
+        }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null
+    },
+    "p0cna5o4iqk8o9w": {
+      "id": "p0cna5o4iqk8o9w",
+      "created": "2022-09-10 15:30:39.101",
+      "updated": "2022-09-10 15:30:39.101",
+      "name": "recipes",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "dhyhvzxa",
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "unique": false,
+          "options": {
+            "min": null,
+            "max": null,
+            "pattern": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "c6vbeyzc",
+          "name": "description",
+          "type": "text",
+          "required": false,
+          "unique": false,
+          "options": {
+            "min": null,
+            "max": null,
+            "pattern": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "gaw89y1z",
+          "name": "instructions",
+          "type": "text",
+          "required": true,
+          "unique": false,
+          "options": {
+            "min": null,
+            "max": null,
+            "pattern": ""
+          }
+        }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null
+    },
+    "u9rglnj8gtmlibp": {
+      "id": "u9rglnj8gtmlibp",
+      "created": "2022-09-10 14:58:44.292",
+      "updated": "2022-09-10 15:11:59.714",
+      "name": "stock",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "wrgqxnwp",
+          "name": "product",
+          "type": "relation",
+          "required": true,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "collectionId": "z0dyci1epj2rl1f",
+            "cascadeDelete": true
+          }
+        },
+        {
+          "system": false,
+          "id": "dkppo7r3",
+          "name": "expires_on",
+          "type": "date",
+          "required": false,
+          "unique": false,
+          "options": {
+            "min": "",
+            "max": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "vjpifbrj",
+          "name": "consumed_on",
+          "type": "date",
+          "required": false,
+          "unique": false,
+          "options": {
+            "min": "",
+            "max": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "xxhujpzd",
+          "name": "location",
+          "type": "relation",
+          "required": true,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "collectionId": "mmvn99h3ywgm6ol",
+            "cascadeDelete": false
+          }
+        },
+        {
+          "system": false,
+          "id": "dbgbifrr",
+          "name": "opened_on",
+          "type": "date",
+          "required": false,
+          "unique": false,
+          "options": {
+            "min": "",
+            "max": ""
+          }
+        }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null
+    },
+    "vp1b2a8fx1d8e0k": {
+      "id": "vp1b2a8fx1d8e0k",
+      "created": "2022-09-10 14:02:03.956",
+      "updated": "2022-09-10 15:06:39.206",
+      "name": "shopping_groups",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "sac311va",
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "unique": true,
+          "options": {
+            "min": null,
+            "max": null,
+            "pattern": ""
+          }
+        }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null
+    },
     "z0dyci1epj2rl1f": {
       "id": "z0dyci1epj2rl1f",
       "created": "2022-09-02 23:42:11.453",
-      "updated": "2022-09-02 23:42:11.453",
+      "updated": "2022-09-10 14:49:19.568",
       "name": "products",
       "system": false,
       "schema": [
@@ -18,6 +315,19 @@
             "min": 1,
             "max": null,
             "pattern": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "bwyhai3m",
+          "name": "default_location",
+          "type": "relation",
+          "required": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "collectionId": "mmvn99h3ywgm6ol",
+            "cascadeDelete": false
           }
         }
       ],
