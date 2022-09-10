@@ -41,5 +41,5 @@ export function getAnchorHREF(e: MouseEvent): string | undefined {
   if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.button || e.defaultPrevented)
     return;
   if (!y || x.target || x.host !== location.host || y[0] == '#') return;
-  return y
+  return y;
 }
