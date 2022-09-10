@@ -38,7 +38,7 @@ export default function Navaid<T>(base = '') {
 
   function route(uri: string, replace = false) {
     if (uri[0] == '/' && !rgx.test(uri)) uri = base + uri;
-    history[replace ? 'replaceState' : 'pushState']({ uri, ctx: run(uri) }, '', uri);
+    history[replace ? 'replaceState' : 'pushState'](run(uri), '', uri);
   }
 
   function on<S extends string>(
@@ -89,8 +89,7 @@ export default function Navaid<T>(base = '') {
 
   function listen() {
     function handle(e: PopStateEvent) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      set(get(e.state?.uri as string, e.state?.ctx as Context));
+      set(get(location.pathname, e.state as Context));
     }
 
     function click(e: MouseEvent) {
@@ -115,8 +114,7 @@ export default function Navaid<T>(base = '') {
     addEventListener('click', click);
     addEventListener('mouseenter', hover);
 
-    route(location.pathname, true);
-
+    set(get(location.pathname, history.state as Context));
     return () => {
       removeEventListener('popstate', handle);
       removeEventListener('click', click);
