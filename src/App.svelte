@@ -1,14 +1,8 @@
 <script lang="ts">
-  import Route from 'lib/Router/Route.svelte';
-  import { useRoutes } from 'lib/Router';
-  import Home from './pages/Home.svelte';
+  import { Route, useHandlers } from '@mpaupulaire4/svelte-router';
+  import handlers from 'virtual:fs-routes';
 
-  useRoutes([
-    {
-      path: '/',
-      component: Home,
-    },
-  ]);
+  useHandlers(handlers);
 </script>
 
 <Route />

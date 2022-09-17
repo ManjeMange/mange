@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "ci": "yarn lint && yarn check",
+    "ci": "yarn lint && yarn scheck",
     "format": "prettier --write \"./src/**/*.{js,svelte,html,ts}\"",
     "lint": "eslint './src/**/*.{js,ts,svelte}'",
     "lint:fix": "yarn lint --fix",
     "prelint:fix": "yarn format",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "scheck": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
@@ -35,6 +35,9 @@
   "dependencies": {
     "@crikey/stores-base-queue": "^0.0.10",
     "@crikey/stores-strict": "^0.0.13",
+    "@mpaupulaire4/rollup-plugin-pages": "^1.0.3",
+    "@mpaupulaire4/svelte-router": "6.0.4",
+    "dot": "^2.0.0-beta.1",
     "regexparam": "^2.0.1"
   }
 }
