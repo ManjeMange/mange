@@ -8,8 +8,6 @@
   "include": [
     "vite.config.ts",
     "windi.config.ts",
-    "svelte.config.js",
-    "rollup.plugin.ts",
-    "templates/**/*.ts"
+    "svelte.config.js"
   ]
 }
