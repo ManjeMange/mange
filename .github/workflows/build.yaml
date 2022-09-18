@@ -32,7 +32,6 @@ jobs:
         run: yarn install --frozen-lockfile --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: yarn rebuild && yarn prepare --if-present
       - name: Run Tests
         run: yarn ci
       - name: Log into registry ${{ env.REGISTRY }}
