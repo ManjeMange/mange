@@ -15,34 +15,25 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  test:
-    name: Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          cache: 'yarn'
-          node-version: 16
-      - name: Install dependencies
-        run: yarn install
-      - name: Run Tests
-        run: yarn ci
   build:
     permissions:
       contents: read
       packages: write
     name: Build
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           cache: 'yarn'
-          node-version: 16
+          node-version: 'lts/*'
+          registry-url: 'https://npm.pkg.github.com'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile --ignore-scripts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Tests
+        run: yarn ci
       - name: Log into registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v2
@@ -68,4 +59,3 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-

@@ -1,11 +1,26 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { FileRouter, SvelteRouterOptions } from '@mpaupulaire4/rollup-plugin-pages';
 import WindiCSS from 'vite-plugin-windicss';
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte(), WindiCSS()],
+  plugins: [
+    svelte({
+      experimental: {
+        prebundleSvelteLibraries: false,
+      },
+    }),
+    WindiCSS(),
+    FileRouter({
+      rootDir: './src/pages/',
+      extensions: ['svelte'],
+      meta: {
+        data: ['ts'],
+      },
+      ...SvelteRouterOptions,
+    }),
+  ],
   resolve: {
     dedupe: ['svelte'],
     alias: {
