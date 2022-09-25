@@ -8,6 +8,6 @@ declare module 'virtual:fs-routes' {
 }
 
 declare module 'pocketbase/umd' {
-  import Client from 'pocketbase'
+  import Client from 'pocketbase/dist/pocketbase.umd'
   export default Client;
 }

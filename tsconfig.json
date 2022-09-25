@@ -12,7 +12,8 @@
     "strict": true,
     "paths": {
       "lib/*": ["src/lib/*"],
-      "components/*": ["src/components/*"]
+      "components/*": ["src/components/*"],
+      "assets/*": ["src/assets/*"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],

@@ -44,6 +44,7 @@ export default defineConfig({
     alias: {
       lib: resolve(__dirname, './src/lib'),
       components: resolve(__dirname, './src/components'),
+      assets: resolve(__dirname, './src/assets'),
     },
   },
 });
