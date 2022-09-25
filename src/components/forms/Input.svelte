@@ -1,10 +1,4 @@
 <script lang="ts">
-  interface $$Props extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap['input']> {
-    label?: string;
-    value?: string;
-    name?: string;
-  }
-
   export let label: string;
   export let value = '';
   export let name: string;

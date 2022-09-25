@@ -3,7 +3,7 @@
 
   // pull this from router automatically some how
   // also add `aria-current="page"` when active
-  export let active = false;
+  // export let active = false;
 </script>
 
 <a
