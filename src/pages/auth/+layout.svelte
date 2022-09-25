@@ -1,6 +1,14 @@
 <script lang="ts">
   import logo from 'assets/SVG/mange-no-logo-w.svg';
+  import { onMount } from 'svelte';
+  import type { Writable } from 'svelte/store';
   import { title } from './title';
+
+  export let reset: Writable<boolean>;
+
+  onMount(() => {
+    reset.set(true);
+  });
 </script>
 
 <div class="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">

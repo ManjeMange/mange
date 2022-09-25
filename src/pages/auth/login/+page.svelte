@@ -2,7 +2,7 @@
   import { createForm } from 'felte';
 
   import Input from 'components/forms/Input.svelte';
-  import { login } from 'lib/users/auth';
+  import { login, logout } from 'lib/users/auth';
   import { title } from '../title';
   import { useRouter } from 'lib/router';
 
@@ -27,6 +27,7 @@
       route('/');
     },
   });
+  logout();
   title.set('Sign in to your account');
 </script>
 
