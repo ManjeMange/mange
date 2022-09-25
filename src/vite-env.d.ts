@@ -6,3 +6,8 @@ declare module 'virtual:fs-routes' {
   const routes: Parameters<typeof useHandlers>[0];
   export default routes;
 }
+
+declare module 'pocketbase/umd' {
+  import Client from 'pocketbase'
+  export default Client;
+}

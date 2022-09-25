@@ -35,7 +35,9 @@
   "dependencies": {
     "@crikey/stores-base-queue": "^0.0.10",
     "@crikey/stores-strict": "^0.0.13",
-    "@mpaupulaire4/rollup-plugin-pages": "^1.0.3",
-    "@mpaupulaire4/svelte-router": "6.0.4"
+    "@mpaupulaire4/rollup-plugin-pages": "^1.0.4",
+    "@mpaupulaire4/svelte-router": "^6.0.5",
+    "felte": "^1.2.3",
+    "pocketbase": "^0.7.1"
   }
 }

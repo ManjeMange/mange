@@ -44,6 +44,18 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@felte/common@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@felte/common/-/common-1.1.2.tgz#02979e91f0182af15052799a2bad411c4d030bf2"
+  integrity sha512-RNSuI+x5BG7oocz0uY+jdkxYRFlRR/C4PZTvfi4mx9U23LzhNSSRG7gPhbQgO75L5YTB1lPwFKJry4uiVXxtwA==
+
+"@felte/core@1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@felte/core/-/core-1.3.3.tgz#99e2fc1f176c458558f42e9b9a5df17d9c69ece1"
+  integrity sha512-RcK3VBx6CL8O37tw8mWS44pfYkJQdxraT+eO5yHr9AjDpeqF4n864AcXnX7r6ists1EFXCXGMLSRrvY99cLFzw==
+  dependencies:
+    "@felte/common" "1.1.2"
+
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.4.tgz#01e7366e57d2ad104feea63e72248f22015c520c"
@@ -86,17 +98,17 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mpaupulaire4/rollup-plugin-pages@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.pkg.github.com/download/@mpaupulaire4/rollup-plugin-pages/1.0.3/7dbce920d5f887cb2044c442df2a94d26490b739#7dbce920d5f887cb2044c442df2a94d26490b739"
-  integrity sha512-0JtL09p7ka4HNSKQbIlRr3y4dn2kyXVrgKWzH/hnDiiRCp6+Z1wZJ1UPiyTllMJbq2IuE2no/Xd49261bzIlww==
+"@mpaupulaire4/rollup-plugin-pages@^1.0.4":
+  version "1.0.4"
+  resolved "https://npm.pkg.github.com/download/@mpaupulaire4/rollup-plugin-pages/1.0.4/ab6de23b935db4cb03471ded8ab95f1b1a203808#ab6de23b935db4cb03471ded8ab95f1b1a203808"
+  integrity sha512-zTxmXb8gWIYaFkzqK3xr7nk0tKdjexWpsEdhcSvlIwOfSvjzT6R65VSG+IBwdQJGmIyB/iDomNE+xqoyajDJfA==
   dependencies:
     mustache "^4.2.0"
 
-"@mpaupulaire4/svelte-router@6.0.4":
-  version "6.0.4"
-  resolved "https://npm.pkg.github.com/download/@mpaupulaire4/svelte-router/6.0.4/1de08bc8547d447d2cf8ea970c1e8fa9b225b482#1de08bc8547d447d2cf8ea970c1e8fa9b225b482"
-  integrity sha512-708efiAErTbAaSzZqOWeXXdvO9lZm9HFHeyQxEH3kk1SKCdwP7AnAn9/8Cs9uBO77r18wY4+dPD8PxdxewFIDg==
+"@mpaupulaire4/svelte-router@^6.0.5":
+  version "6.0.5"
+  resolved "https://npm.pkg.github.com/download/@mpaupulaire4/svelte-router/6.0.5/94692908f89075d4d2a0e31f5b5f2424ff6d0604#94692908f89075d4d2a0e31f5b5f2424ff6d0604"
+  integrity sha512-HVwmtcsZU91k76fy/Uutimxu95pweKquXX/81yo7gIE1s808BlRab6qeEYLSgS+T12uDCMiqRDTfI0nGrQU1rw==
   dependencies:
     "@crikey/stores-base-queue" "^0.0.10"
     "@crikey/stores-strict" "^0.0.13"
@@ -739,6 +751,13 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
+felte@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/felte/-/felte-1.2.3.tgz#3301cca3187b4511912d1b1764ffb845017fdde7"
+  integrity sha512-AUxizK3LP+S14TvnPyOgJMEJfzKE4FPz+A4386kRdpOEEYFyh+pwKOvIkGZWO7c6LIuDIs6DDmP0VS9Cjq4Qhg==
+  dependencies:
+    "@felte/core" "1.3.3"
+
 file-entry-cache@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-6.0.1.tgz#211b2dd9659cb0394b073e7323ac3c933d522027"
@@ -1142,6 +1161,11 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+pocketbase@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/pocketbase/-/pocketbase-0.7.1.tgz#fdff7e9c6b23f3543fa14b412a496279329ce12d"
+  integrity sha512-uA/Ltci3OrZ/sYfOjB/SCQX87xnB0Gowci0eUNgK7Sb0gk68Yy79ynTKgcmrw6wdXXVrY/vOoNR/DU8oahCBAA==
 
 postcss@^8.4.16:
   version "8.4.16"
