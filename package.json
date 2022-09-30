@@ -42,7 +42,7 @@
   "dependencies": {
     "@crikey/stores-base-queue": "^0.0.10",
     "@crikey/stores-strict": "^0.0.13",
-    "@mpaupulaire4/svelte-router": "^6.0.5",
+    "@mpaupulaire4/svelte-router": "^6.1.0",
     "felte": "^1.2.3",
     "pocketbase": "^0.7.1"
   }

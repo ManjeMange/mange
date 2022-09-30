@@ -1,10 +1,10 @@
 <script lang="ts">
+  import { useRouter } from '@mpaupulaire4/svelte-router';
   import { createForm } from 'felte';
 
   import Input from 'components/forms/Input.svelte';
   import { register } from 'lib/users/auth';
   import { title } from '../title';
-  import { useRouter } from 'lib/router';
 
   type FormData = {
     email: string;
@@ -25,7 +25,7 @@
       console.error(e);
     },
     onSuccess: () => {
-      route('/')
+      route('/');
     },
   });
   title.set('Sign up for an account');
