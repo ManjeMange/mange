@@ -3,20 +3,25 @@
   import { createForm } from 'felte';
 
   import Input from 'components/forms/Input.svelte';
-  import { register } from 'lib/users/auth';
+  import { resetPassConfirm, resetPassRequest } from 'lib/users/auth';
   import { title } from '../title';
 
-  type FormData = {
+  interface FormData {
     email: string;
     password: string;
-    confirmPassword: string;
-  };
+    passwordConfirm: string;
+  }
+
+  const token = new URLSearchParams(location.search).get('token');
 
   const { route } = useRouter();
 
   const { form } = createForm<FormData>({
     onSubmit: data => {
-      return register(data.email, data.password, data.confirmPassword);
+      if (token) {
+        return resetPassConfirm(token, data.password, data.passwordConfirm);
+      }
+      return resetPassRequest(data.email);
     },
     onError: e => {
       // show error message
@@ -28,29 +33,34 @@
       route('/');
     },
   });
-  title.set('Sign up for an account');
+  title.set('Reset Passwoard');
 </script>
 
 <form class="space-y-6" use:form>
-  <Input type="text" label="Email Address" name="email" autocomplete="email" required />
-  <Input
-    type="password"
-    label="Password"
-    name="password"
-    autocomplete="new-password"
-    required
-  />
-  <Input
-    type="password"
-    label="Confirm Password"
-    name="confirmPassword"
-    autocomplete="new-password"
-    required
-  />
+  {#if token}
+    <Input
+      type="text"
+      label="New Passwoord"
+      name="password"
+      autocomplete="new-password"
+      required
+    />
+    <Input
+      type="text"
+      label="Confirm Password"
+      name="passwordConfirm"
+      autocomplete="new-password"
+      required
+    />
+  {:else}
+    <Input type="text" label="Email Address" name="email" autocomplete="email" required />
+  {/if}
+
   <div class="flex items-center justify-between">
+    <div />
     <div class="text-sm">
-      <a href="/auth/login" class="font-medium text-indigo-600 hover:text-indigo-500">
-        Already have an account?
+      <a href="/login" class="font-medium text-indigo-600 hover:text-indigo-500">
+        Need to log in?
       </a>
     </div>
   </div>

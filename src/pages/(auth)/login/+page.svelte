@@ -42,12 +42,12 @@
   />
   <div class="flex items-center justify-between">
     <div class="text-sm">
-      <a href="/auth/signup" class="font-medium text-indigo-600 hover:text-indigo-500">
+      <a href="/signup" class="font-medium text-indigo-600 hover:text-indigo-500">
         Don't have an account?
       </a>
     </div>
     <div class="text-sm">
-      <a href="/auth/reset" class="font-medium text-indigo-600 hover:text-indigo-500">
+      <a href="/reset" class="font-medium text-indigo-600 hover:text-indigo-500">
         Forgot your password?
       </a>
     </div>
