@@ -1,8 +1,15 @@
 <script lang="ts">
   import { writable } from '@crikey/stores-strict';
-  import { Route } from '@mpaupulaire4/svelte-router';
+  import { Route, useRouter } from '@mpaupulaire4/svelte-router';
   import NavBar from 'components/Nav/Bar.svelte';
+  import { AuthStore } from 'lib/users/auth';
+
   const title = writable('');
+  const { route } = useRouter();
+
+  $: if (!$AuthStore) {
+    route('/login', true);
+  }
 </script>
 
 <div class="min-h-full">

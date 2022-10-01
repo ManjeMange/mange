@@ -1,5 +1,10 @@
 <script lang="ts">
   import svelteLogo from 'assets/svelte.svg';
+  import type { Writable } from 'svelte/store';
+
+  export let title: Writable<string>;
+
+  title.set('Home Page');
 </script>
 
 <main>

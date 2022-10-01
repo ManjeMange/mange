@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { logout } from 'lib/users/auth';
+  import logo from 'assets/SVG/mange-no-logo-w.svg';
+
   import NavLink from './Link.svelte';
   import MenuMobile from './MenuMobile.svelte';
   import MobileLink from './MobileLink.svelte';
@@ -30,13 +33,9 @@
     >
       <div class="flex items-center px-2 lg:px-0">
         <div class="flex-shrink-0">
-          <img
-            class="block h-8 w-8"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
-            alt="Your Company"
-          />
+          <img class="block h-12 w-12" src={logo} alt="Mange Logo" />
         </div>
-        <div class="hidden lg:(ml-10 block)">
+        <div class="hidden lg:(ml-2 block)">
           <div class="flex space-x-4">
             {#each pages as { href, label } (label)}
               <NavLink {href}>{label}</NavLink>
@@ -124,10 +123,11 @@
               >
 
               <a
-                href="/auth/login"
+                href="/login"
                 class="block py-2 px-4 text-sm text-gray-700"
                 role="menuitem"
                 id="user-menu-item-1"
+                on:click={logout}
               >
                 Sign out
               </a>

@@ -31,7 +31,8 @@ export function resetPassConfirm(token: string, pass: string, passConfirm: strin
   return client.users.confirmPasswordReset(token, pass, passConfirm);
 }
 
-export const AuthStore = readable<User | null>(null, set => {
+export const AuthStore = readable<User | null>(client.authStore.model, set => {
+  client.authStore && client.authStore.isValid && set(client.authStore.model);
   return client.authStore.onChange(() => {
     set(client.authStore.model);
   });
