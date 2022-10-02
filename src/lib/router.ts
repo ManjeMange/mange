@@ -1,8 +1,6 @@
-import { getContext } from 'svelte';
+import { useRouter } from '@mpaupulaire4/svelte-router';
 
 export function getRefetch() {
-  const { route } = getContext<{ route: (p: string, r: boolean) => void }>(
-    'svelte-router'
-  );
+  const { route } = useRouter();
   return () => route(location.pathname, true);
 }
