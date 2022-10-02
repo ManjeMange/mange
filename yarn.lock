@@ -164,9 +164,9 @@
     mini-svg-data-uri "^1.4.4"
 
 "@mpaupulaire4/rollup-plugin-pages@^2.0.0":
-  version "2.0.0"
-  resolved "https://npm.pkg.github.com/download/@mpaupulaire4/rollup-plugin-pages/2.0.0/2ce56015a1ad5a8cf7a0d97757209a8d2cba7475#2ce56015a1ad5a8cf7a0d97757209a8d2cba7475"
-  integrity sha512-lb69WW+O+SUeYcwjDNqeOsvtZ1B3gt/p488Yyyzh6/M+4JTPvui0gztJN72XYBTS1BwsvLQ9QtqcLd9zJQIHCQ==
+  version "2.0.1"
+  resolved "https://npm.pkg.github.com/download/@mpaupulaire4/rollup-plugin-pages/2.0.1/2b8eacb4d9a375a8b827ff8382cd7da6601abde2#2b8eacb4d9a375a8b827ff8382cd7da6601abde2"
+  integrity sha512-zCT3ay88STMDGJJtW3jibz7v2VGQSEGF6tVh6sCVYcBKdQ8sXkZSyvqsQ59RjWZZx0jKBFUhb3+iYh4CQrMGBg==
   dependencies:
     fast-glob "^3.2.12"
     micromatch "^4.0.5"

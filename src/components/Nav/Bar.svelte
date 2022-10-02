@@ -8,20 +8,20 @@
 
   const pages = [
     {
-      href: '/',
+      href: '/inventory',
       label: 'Inventory',
     },
     {
-      href: '/',
+      href: '/shopping',
       label: 'Shopping',
     },
     {
-      href: '/',
+      href: '/recipes',
       label: 'Recipes',
     },
     {
-      href: '/',
-      label: 'Calendar',
+      href: '/meal-plans',
+      label: 'Meal Plans',
     },
   ];
 </script>
