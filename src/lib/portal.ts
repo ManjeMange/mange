@@ -4,7 +4,7 @@ export default function portal(el: HTMLElement, target: HTMLElement | string = '
   async function update(target: HTMLElement | string) {
     let targetEl = null;
     if (typeof target === 'string') {
-      let targetEl = document.querySelector(target);
+      targetEl = document.querySelector(target);
       if (targetEl === null) {
         await tick();
         targetEl = document.querySelector(target);
@@ -21,7 +21,7 @@ export default function portal(el: HTMLElement, target: HTMLElement | string = '
         }. Allowed types: string (CSS selector) or HTMLElement.`
       );
     }
-    targetEl?.appendChild(el);
+    targetEl.appendChild(el);
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     el.hidden = false;
   }

@@ -32,9 +32,9 @@ export default defineConfig({
     }),
     FileRouter({
       rootDir: './src/pages/',
-      extensions: ['svelte'],
+      extension: 'svelte',
       meta: {
-        data: ['ts'],
+        data: 'ts',
       },
       ...SvelteRouterOptions,
     }),
