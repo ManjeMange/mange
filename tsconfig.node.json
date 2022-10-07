@@ -7,7 +7,9 @@
   },
   "include": [
     "vite.config.ts",
+    "cypress.config.ts",
     "windi.config.ts",
-    "svelte.config.js"
+    "svelte.config.js",
+    "cypress/**/*.ts"
   ]
 }

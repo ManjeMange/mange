@@ -17,6 +17,8 @@
     "scheck": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "@iconify-json/heroicons": "^1.1.4",
     "@julr/unocss-preset-forms": "^0.0.2",
     "@mpaupulaire4/rollup-plugin-pages": "^2.0.0",
@@ -29,6 +31,7 @@
     "@unocss/preset-wind": "^0.45.22",
     "@unocss/reset": "^0.45.22",
     "@unocss/transformer-variant-group": "^0.45.22",
+    "cypress": "^10.9.0",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.10.0",
