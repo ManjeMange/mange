@@ -1,13 +1,9 @@
-import { When, Then } from '@badeball/cypress-cucumber-preprocessor';
+import { When, Then, Given } from '@badeball/cypress-cucumber-preprocessor';
 
-When('I visit duckduckgo.com', () => {
-  cy.visit('https://www.duckduckgo.com');
+When('I visit {string}', function () {
+  cy.visit('/');
 });
 
-Then('I should see a search bar', () => {
-  cy.get('input').should(
-    'have.attr',
-    'placeholder',
-    'Search the web without being tracked'
-  );
+Then('I should see {string}', function (text: string) {
+  cy.contains(text);
 });

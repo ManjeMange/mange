@@ -1,4 +1,4 @@
-Feature: duckduckgo.com
-  Scenario: visiting the frontpage
-    When I visit duckduckgo.com
-    Then I should see a search bar
+Feature: Login
+  Scenario: Visiting the login page
+    When I visit "/login"
+    Then I should see "Sign in to your account"
