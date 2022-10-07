@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 COPY ./pocketbase /pocketbase
-COPY ./dist /pb_public
+COPY ./pb_public /pb_public
 COPY ./schema.json /schema.json
 
 EXPOSE 8090
