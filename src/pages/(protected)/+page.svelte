@@ -1,6 +1,10 @@
 <script lang="ts">
-  import svelteLogo from '../assets/svelte.svg';
-  import Counter from 'components/Counter.svelte';
+  import svelteLogo from 'assets/svelte.svg';
+  import type { Writable } from 'svelte/store';
+
+  export let title: Writable<string>;
+
+  title.set('Home Page');
 </script>
 
 <main>
@@ -13,10 +17,6 @@
     </a>
   </div>
   <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
 
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank"

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Route, useHandlers } from '@mpaupulaire4/svelte-router';
+  import { useHandlers, Route } from '@mpaupulaire4/svelte-router';
   import handlers from 'virtual:fs-routes';
 
   useHandlers(handlers);
