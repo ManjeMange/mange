@@ -58,5 +58,12 @@
     "@mpaupulaire4/svelte-router": "^6.1.0",
     "felte": "^1.2.3",
     "pocketbase": "^0.7.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/features/[filepath].ts",
+      "cypress/features/[filepart]/steps.ts",
+      "cypress/features/[filepart]/steps/**/*.ts"
+    ]
   }
 }
