@@ -32,6 +32,8 @@ jobs:
         run: yarn install --frozen-lockfile --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build App
+        run: yarn build
       - name: Run Tests
         run: yarn ci
       - name: Log into registry ${{ env.REGISTRY }}
@@ -47,9 +49,6 @@ jobs:
         uses: docker/metadata-action@v2
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - name: Build App
-        run: yarn build
 
       - name: Build and push Docker image
         id: build-and-push

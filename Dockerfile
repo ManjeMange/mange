@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 COPY ./pocketbase /pocketbase
 COPY ./pb_public /pb_public
