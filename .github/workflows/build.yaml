@@ -28,10 +28,28 @@ jobs:
           cache: 'yarn'
           node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com'
+
+      - name: Cache Cypress binary
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-cypress-${{ hashFiles('**/yarn.lock') }}
+
+      # - name: Headless Chrome
+      #   uses: cypress-io/github-action@v4
+      #   timeout-minutes: 10
+      #   with:
+      #     build: yarn build
+      #     start: npm start
+      #     browser: chrome
+      #     headless: true
+      #     record: true
       - name: Install dependencies
         run: yarn install --frozen-lockfile --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build App
+        run: yarn build
       - name: Run Tests
         run: yarn ci
       - name: Log into registry ${{ env.REGISTRY }}
@@ -47,9 +65,6 @@ jobs:
         uses: docker/metadata-action@v2
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - name: Build App
-        run: yarn build
 
       - name: Build and push Docker image
         id: build-and-push

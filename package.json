@@ -4,19 +4,26 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "ci": "yarn lint && yarn scheck && yarn format:check",
+    "dev": "concurrently -n vite,base \"vite\" \"yarn:serve\"",
+    "dev:vite": "vite",
+    "serve": "./pocketbase serve",
+    "ci": "yarn lint && yarn scheck && yarn format:check && yarn test",
+    "test": "start-server-and-test 'yarn serve' http-get://localhost:8090 'yarn cy'",
+    "cy": "cypress run --config baseUrl=http://localhost:8090",
     "pretty": "prettier \"./src/**/*.{js,svelte,html,ts}\"",
     "format": "yarn pretty --write",
     "format:check": "yarn pretty --check",
     "lint": "eslint './src/**/*.{js,ts,svelte}'",
     "lint:fix": "yarn lint --fix",
     "prelint:fix": "yarn format",
-    "build": "vite build",
+    "build": "vite build && copyup \"./dist/**/*\" pb_public",
     "preview": "vite preview",
     "scheck": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@faker-js/faker": "^7.5.0",
     "@iconify-json/heroicons": "^1.1.4",
     "@julr/unocss-preset-forms": "^0.0.2",
     "@mpaupulaire4/rollup-plugin-pages": "^2.0.0",
@@ -29,11 +36,15 @@
     "@unocss/preset-wind": "^0.45.22",
     "@unocss/reset": "^0.45.22",
     "@unocss/transformer-variant-group": "^0.45.22",
+    "concurrently": "^7.4.0",
+    "copyfiles": "^2.4.1",
+    "cypress": "^10.9.0",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.10.0",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
+    "start-server-and-test": "^1.14.0",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",
@@ -48,5 +59,12 @@
     "@mpaupulaire4/svelte-router": "^6.1.0",
     "felte": "^1.2.3",
     "pocketbase": "^0.7.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/features/[filepath].ts",
+      "cypress/features/[filepart]/steps.ts",
+      "cypress/features/[filepart]/steps/**/*.ts"
+    ]
   }
 }
