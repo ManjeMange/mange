@@ -23,6 +23,7 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@faker-js/faker": "^7.5.0",
     "@iconify-json/heroicons": "^1.1.4",
     "@julr/unocss-preset-forms": "^0.0.2",
     "@mpaupulaire4/rollup-plugin-pages": "^2.0.0",

@@ -9,7 +9,6 @@
     "vite.config.ts",
     "cypress.config.ts",
     "windi.config.ts",
-    "svelte.config.js",
-    "cypress/**/*.ts"
+    "svelte.config.js"
   ]
 }

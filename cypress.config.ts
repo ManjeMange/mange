@@ -27,5 +27,8 @@ export default defineConfig({
     specPattern: '**/*.feature',
     supportFile: false,
     setupNodeEvents,
+    env: {
+      API_URI: 'http://0.0.0.0:8090'
+    }
   },
 });
